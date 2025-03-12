@@ -1,52 +1,29 @@
-<style scoped>
-  /* === removing default button style ===*/
-  .button {
-    margin: 0;
-    height: auto;
-    background: transparent;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-  }
-
-  /* button styling */
-  .button {
-    --border-right: 6px;
-    --text-stroke-color: rgba(255,255,255,0.6);
-    --animation-color: #37FF8B;
-    --fs-size: 2em;
-    letter-spacing: 3px;
-    text-decoration: none;
-    font-size: var(--fs-size);
-    font-family: "Arial";
-    position: relative;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--text-stroke-color);
-  }
-  /* this is the text, when you hover on button */
-  .hover-text {
-    position: absolute;
-    box-sizing: border-box;
-    content: attr(data-text);
-    color: var(--animation-color);
-    width: 0%;
-    inset: 0;
-    border-right: var(--border-right) solid var(--animation-color);
-    overflow: hidden;
-    transition: 0.5s;
-    -webkit-text-stroke: 1px var(--animation-color);
-  }
-  /* hover */
-  .button:hover .hover-text {
-    width: 100%;
-    filter: drop-shadow(0 0 23px var(--animation-color))
-  }
-</style>
-
-<template>
-  <button class="button" data-text="Awesome">
-      <span class="actual-text">&nbsp;uiverse&nbsp;</span>
-      <span aria-hidden="true" class="hover-text">&nbsp;uiverse&nbsp;</span>
-  </button>
-</template>
+/* From Uiverse.io by shivam_7937 */ 
+<div class="relative inline-flex items-center justify-center gap-4 group">
+  <div
+    class="absolute inset-0 duration-1000 opacity-60 transitiona-all bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-400 rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"
+  ></div>
+  <a
+    role="button"
+    class="group relative inline-flex items-center justify-center text-base rounded-xl bg-gray-900 px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
+    title="payment"
+    href="#"
+    >Get Started For Free<svg
+      aria-hidden="true"
+      viewBox="0 0 10 10"
+      height="10"
+      width="10"
+      fill="none"
+      class="mt-0.5 ml-2 -mr-1 stroke-white stroke-2"
+    >
+      <path
+        d="M0 5h7"
+        class="transition opacity-0 group-hover:opacity-100"
+      ></path>
+      <path
+        d="M1 1l4 4-4 4"
+        class="transition group-hover:translate-x-[3px]"
+      ></path>
+    </svg>
+  </a>
+</div>
